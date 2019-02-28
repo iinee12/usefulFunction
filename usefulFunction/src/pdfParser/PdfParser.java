@@ -13,7 +13,7 @@ import org.apache.pdfbox.text.PDFTextStripper;
 
 public class PdfParser {
 	
-	private String Text;   //pdf¿¡¼­ ÆÄ½ÌµÈ ³»¿ëÀ» ¹®ÀÚ¿­·Î ÀúÀå
+	private String Text;   //pdfì—ì„œ íŒŒì‹±ëœ ë‚´ìš©ì„ ë¬¸ìì—´ë¡œ ì €ì¥
 	private String filePath;
 	private File file;
 	
@@ -35,9 +35,9 @@ public class PdfParser {
 		
 		pdfStripper.setEndPage(pdDoc.getNumberOfPages());
 		
-		Text = pdfStripper.getText(pdDoc);
+		Text = pdfStripper.getText(pdDoc); //pdfì˜ ëª¨ë“  ë‚´ìš©ì„ í…ìŠ¤íŠ¸ë¡œ ê°€ì ¸ì˜¨ë‹¤
 		
-		File file = new File("³»º¸³¾ ÆÄÀÏÀ» ÇüÅÂ¿Í °æ·Î");
+		File file = new File("ë‚´ë³´ë‚¼ íŒŒì¼ì„ í˜•íƒœì™€ ê²½ë¡œ");
 		FileWriter writer = null;
 		
 		try {
@@ -55,7 +55,7 @@ public class PdfParser {
 	
 	public static void main(String[] args) throws FileNotFoundException, IOException {
 		
-		String filepath = "PDFÆÄÀÏÀÌ ÀÖ´Â °æ·Î";
+		String filepath = "PDFíŒŒì¼ì´ ìˆëŠ” ê²½ë¡œ";
 		File dir = new File(filepath);
 		File[] fList = dir.listFiles();
 		
